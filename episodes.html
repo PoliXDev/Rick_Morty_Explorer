@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episodios - Rick & Morty Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/theme.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <img src="./assets/text2.png" alt="Rick and Morty" class="header-logo">
+            <p class="header-subtitle">Explora todos los episodios</p>
+            <nav class="header-nav">
+                <a href="./characters.html" class="nav-link">Personajes</a>
+                <a href="./episodes.html" class="nav-link active">Episodios</a>
+                <a href="./favorites.html" class="nav-link">Favoritos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Search Section -->
+            <section class="search-section">
+                <input 
+                    type="text" 
+                    id="episode-search-input" 
+                    class="search-input" 
+                    placeholder="Buscar episodios por nombre..."
+                >
+            </section>
+
+            <!-- Filters Section -->
+            <section class="filters-section">
+                <div class="filter-group">
+                    <label for="season-filter">Temporada:</label>
+                    <select id="season-filter" class="filter-select">
+                        <option value="">Todas</option>
+                        <option value="S01">Temporada 1</option>
+                        <option value="S02">Temporada 2</option>
+                        <option value="S03">Temporada 3</option>
+                        <option value="S04">Temporada 4</option>
+                        <option value="S05">Temporada 5</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Loader -->
+            <div id="loader" class="loader hidden">
+                <div class="loader-spinner"></div>
+                <p>Cargando episodios...</p>
+            </div>
+
+          
+            <div id="error-message" class="error-message hidden"></div>
+
+           
+            <section id="episodes-grid" class="episodes-grid"></section>
+
+          
+            <div class="load-more-container">
+                <button id="load-more-btn" class="load-more-btn hidden">
+                    Cargar más episodios
+                </button>
+            </div>
+        </div>
+    </main>
+
+  
+    <footer class="footer">
+        <div class="container">
+            <p>Powered by <a href="https://rickandmortyapi.com" target="_blank">Rick and Morty API</a></p>
+            <p>Desarrollado por <a href="https://github.com/PoliXDev" target="_blank">Daniel Ruiz</a></p>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
+

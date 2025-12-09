@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Personaje - Rick & Morty Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Rick_Morty_Explorer/css/reset.css">
+    <link rel="stylesheet" href="/Rick_Morty_Explorer/css/theme.css">
+    <link rel="stylesheet" href="/Rick_Morty_Explorer/css/layout.css">
+    <link rel="stylesheet" href="/Rick_Morty_Explorer/css/components.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <a href="/Rick_Morty_Explorer/characters.html" class="back-link">← Volver</a>
+            <img src="/Rick_Morty_Explorer/assets/text2.png" alt="Rick and Morty" class="header-logo">
+            <nav class="header-nav">
+                <a href="/Rick_Morty_Explorer/characters.html" class="nav-link">Personajes</a>
+                <a href="/Rick_Morty_Explorer/episodes.html" class="nav-link">Episodios</a>
+                <a href="/Rick_Morty_Explorer/favorites.html" class="nav-link">Favoritos</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main class="main-content">
+        <div class="container">
+          
+            <div id="loader" class="loader hidden">
+                <div class="loader-spinner"></div>
+                <p>Cargando personaje...</p>
+            </div>
+
+          
+            <div id="error-message" class="error-message hidden"></div>
+
+          
+            <div id="character-detail" class="character-detail"></div>
+        </div>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <p>Powered by <a href="https://rickandmortyapi.com" target="_blank">Rick and Morty API</a></p>
+            <p>Desarrollado por <a href="https://github.com/PoliXDev" target="_blank">Daniel Ruiz Poli</a></p>
+        </div>
+    </footer>
+
+    <audio autoplay loop id="background-audio">
+        <source src="/Rick_Morty_Explorer/assets/background_sound.mp3" type="audio/mpeg">
+    </audio>
+
+    <script type="module" src="/Rick_Morty_Explorer/js/app.js"></script>
+    <script>
+        const audio = document.getElementById('background-audio');
+        audio.volume = 0.3;
+        document.addEventListener('click', () => {
+            audio.play().catch(() => {});
+        }, { once: true });
+    </script>
+</body>
+</html>
+
+
